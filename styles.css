@@ -1,0 +1,273 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .cta-button {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Hero section styles */
+  .hero {
+    text-align: center;
+    background-image: url('https://example.com/your-hero-image.jpg'); /* Add a background image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
+  
+  /* Collections section styles */
+  .collections {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .collection {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .collection img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .collection h3 {
+    margin: 10px 0;
+  }
+  
+  /* Slider section styles */
+  .slider-section {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  /* About Us section styles */
+  .about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  /* Testimonials section styles */
+  .testimonials {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Contact section styles */
+  .contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+  }
+  
+  /* Social icons styles */
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #e91e63;
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 28px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .hero {
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the image */
+    color: white; /* Text color */
+    padding: 100px 20px; /* Add some padding */
+    text-align: center; /* Center-align the text */
+    position: relative; /* For positioning overlay */
+  }
+  
+  .hero-content {
+    position: relative; /* For positioning child elements */
+    z-index: 1; /* Ensure text is above the background */
+  }
+  
+  .hero::before {
+    content: ""; /* Create a pseudo-element for overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+    z-index: 0; /* Place overlay below the content */
+  }
+  
+  .cta-button {
+    background-color: #b12704; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 15px 30px; /* Button padding */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+  }
+  
+  .cta-button:hover {
+    background-color: #ff5733; /* Change color on hover */
+  }
+  
+  .tagline {
+    margin-top: 10px; /* Space between tagline and button */
+    font-size: 16px; /* Tagline font size */
+    font-style: italic; /* Italic style */
+  }
+  
+
+  .header-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .header-buttons .secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #f39c12; /* Match the primary button's color */
+  }
+  
+  .header-buttons .secondary:hover {
+    background-color: #f39c12; /* Background color on hover */
+    color: white; /* Text color change on hover */
+  }
+  
